@@ -1,0 +1,150 @@
+.booking-form-page {
+	.step-booking {
+		// position: sticky;
+		// z-index: 2;
+		// top: 80px;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			gap: 10px;
+			overflow: hidden;
+			border-radius: 20px;
+			
+			@include breakpoint(mobile) {
+				gap: 0;
+				flex-direction: column;
+			}
+
+			li {
+				margin: 0;
+
+				display: flex;
+				flex: 1 0 120px;
+				margin-right: calc(20px*-1);
+				
+				@include breakpoint(mobile) {
+					width: 100%;
+					flex: 1 0 auto;
+					margin-left: 0 !important;
+					margin-right: 0 !important;
+				}
+
+				&:first-child {
+					.step-item {
+						clip-path: polygon(0 0,calc(100% - 20px) 0,100% 50%,calc(100% - 20px) 100%,0 100%);
+
+						@include breakpoint(mobile) {
+							clip-path: none;
+							border-radius: 0;
+						}
+					}
+				}
+				
+				&:last-child {
+					margin-right: 0;
+
+					.step-item {
+						clip-path: polygon(0 0,100% 0,100% 100%,0 100%,20px 50%);
+
+						@include breakpoint(mobile) {
+							clip-path: none;
+							border-radius: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.step-item {
+			font-size: 1rem;
+			line-height: 130%;
+			display: block;
+			background-color: $semi-blue;
+			color: $title-color;
+			padding: 10px 20px 10px calc(20px + 14px);
+			width: 100%;
+			cursor: default;
+			pointer-events: none;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%, 20px 50%);
+			
+			@include breakpoint(mobile) {
+				clip-path: none;
+				padding: 12px 15px;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 1.2rem;
+			}
+
+			&.completed {
+				background-color: rgba($button-hover-background, 0.7);
+				color: $white;
+				pointer-events: visible;
+				cursor: pointer;
+
+				.icon-number {
+					background-color: $semi-blue;
+				}
+			}
+
+			&.active {
+				background-color: $button-hover-background;
+				color: $white;
+				pointer-events: visible;
+				cursor: pointer;
+				
+				.icon-number {
+					background-color: $white;
+					color: $button-hover-background;
+				}
+			}
+
+			span {
+				line-height: 110%;
+			}
+
+			.icon-number {
+				font-size: 1rem;
+				text-align: center;
+				line-height: 1;
+				width: 30px;
+				height: 30px;
+				background-color: darken($semi-blue, 10%);
+				color: $title-highlight-color;
+				clear: both;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				flex-shrink: 0;
+				justify-content: center;
+				pointer-events: none;
+
+				@include breakpoint(tablet) {
+					font-size: 1.3rem;
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+
+		+ .custom-form {
+			margin-top: 50px;
+		}
+	}
+
+	.form {
+		.form-row {
+			+ .form-row {
+				margin-top: 10px;
+			}
+		}
+	}
+}

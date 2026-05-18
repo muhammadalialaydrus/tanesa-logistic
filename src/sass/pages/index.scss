@@ -1,0 +1,993 @@
+.hero-banner {
+	.wrapper {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+
+		figure {
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+
+		figure {
+			background: #0F698D;
+			background: -webkit-linear-gradient(180deg, rgba(15, 105, 141, 0) 10%, rgba(15, 105, 141, 0.8) 100%);
+			background: -moz-linear-gradient(180deg, rgba(15, 105, 141, 0) 10%, rgba(15, 105, 141, 0.8) 100%);
+			background: linear-gradient(180deg, rgba(15, 105, 141, 0) 10%, rgba(15, 105, 141, 0.8) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0F698D", endColorstr="#0F698D", GradientType=0);
+			// mix-blend-mode: multiply;
+		}
+
+		#video-cover {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.images {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-position: 85% 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			@include breakpoint(tablet) {
+				background-position: 75% 0;
+			}
+			
+			@include breakpoint(wide) {
+				background-position: center;
+			}
+		}
+
+		.with-mask {
+			mix-blend-mode: multiply;
+		}
+	}
+
+	.hero-tracking {
+		height: 100vh;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+
+		.wrapper-tracking {
+			width: 100%;
+			padding: 0 15px;
+			text-align: center;
+			
+			@include breakpoint(tablet) {
+				padding: 0;
+				width: 80%;
+			}
+			
+			@include breakpoint(wide) {
+				width: 60%;
+			}
+			
+			@include breakpoint(desktop) {
+				width: 50%;
+			}
+		}
+
+		h3 {
+			font-size: 1.3rem;
+			text-shadow: 0px 2px 15px rgba(0,0,0,0.3);
+			color: $white;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.6rem;
+			}
+
+			+ .search-tracking {
+				margin-top: 20px;
+			}
+		}
+		
+		.search-tracking {
+			.tracking-inside {
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 0 30px rgba($black, 0.15);
+			}
+
+			.search-area {
+				position: relative;
+				width: 100%;
+			}
+
+			.form {
+				.form-row {
+					margin: 0;
+				}
+
+				.form-group {
+					position: relative;
+
+					&[class*="col-"] {
+						padding: 0;
+					}
+				}
+
+				.form-control {
+					font-size: 14px;
+					line-height: 100%;
+					padding: 13px 30px;
+					background-color: $white;
+					height: 50px;
+					border-radius: 30px;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					
+					@include breakpoint(tablet) {
+						font-size: 16px;
+					}
+				}
+			}
+
+			.button-area {
+				.button {
+					// padding: 16px 30px;
+					line-height: 48px;
+					padding: 0 30px;
+					height: 50px;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+.check-rates-home {
+	position: relative;
+
+	.wrapper {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		padding: 0 15px;
+		
+		@include breakpoint(tablet) {
+			padding: 0;
+		}
+	}
+
+	.check-inside {
+		width: 100%;
+		background-color: $white;
+		padding: 30px 20px;
+		border-radius: 40px;
+		box-shadow: 0 0 30px rgba($black, 0.15);
+		
+		@include breakpoint(tablet) {
+			padding: 30px;
+			width: 80%;
+		}
+		
+		@include breakpoint(wide) {
+			width: 60%;
+		}
+		
+		@include breakpoint(desktop) {
+			width: 50%;
+		}
+
+		h5 {
+			font-size: 1.1rem;
+			text-align: left;
+			color: $title-highlight-color;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.25rem;
+			}
+
+			+ .custom-form {
+				margin-top: 20px;
+			}
+		}
+
+		.custom-form {
+			.form {
+				@include breakpoint(tablet) {
+					display: flex;
+					flex-wrap: nowrap;
+					align-items: center;
+					justify-content: center;
+					gap: 10px;
+				}
+
+				.form-control {
+					font-size: 14px;
+					line-height: 100%;
+					padding: 14px 16px;
+
+					@include breakpoint(tablet) {
+						font-size: 16px;
+						padding: 13px 16px;
+					}
+				}
+
+				.form-row {
+					width: 100%;
+					
+					@include breakpoint(mobile) {
+						margin: 0;
+					}
+
+					.form-group {
+						padding-top: 0;
+						padding-bottom: 0;
+						
+						@include breakpoint(mobile) {
+							padding: 0;
+						}
+
+						+ .form-group {
+							margin-top: 10px;
+
+							@include breakpoint(tablet) {
+								margin-top: 0;
+							}
+						}
+					}
+
+					+ .button-area {
+						margin-top: 15px;
+						
+						@include breakpoint(tablet) {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.client-info {
+	background-color: $semi-blue;
+	padding: 60px 0;
+
+	.client-row {
+		& > [class*="col-"] {
+			padding: 5px;
+
+			@include breakpoint(tablet) {
+				padding: 10px;
+			}
+
+			@include breakpoint(desktop) {
+				padding: 0 10px;
+			}
+		}
+
+		+ .viewall {
+			margin-top: 30px;
+		}
+	}
+
+	.client-wrapper {
+		padding: 1rem 1.5rem;
+		background-color: $white;
+		border-radius: 30px;
+		overflow: hidden;
+	}
+
+	.image-area {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		figure {
+			width: 80%;
+			height: 50px;
+			
+			@include breakpoint(tablet) {
+				height: 80px;
+			}
+			
+			@include breakpoint(wide) {
+				height: 70px;
+			}
+			
+			@include breakpoint(desktop) {
+				height: 60px;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				object-position: center;
+			}
+		}
+	}
+}
+
+.advantages-info {
+	.advantages-row {
+		margin: -10px;
+
+		@include breakpoint(tablet) {
+			margin: -15px;
+		}
+
+		& > [class*="col-"] {
+			padding: 10px;
+
+			@include breakpoint(tablet) {
+				padding: 15px;
+			}
+		}
+
+		+ .viewall {
+			margin-top: 30px;
+		}
+	}
+
+	.box {
+		background-color: $white;
+		padding: 30px 20px;
+		text-align: center;
+		height: 100%;
+		border-radius: 60px;
+		box-shadow: 0 0 30px rgba($black, 0.15);
+		
+		@include breakpoint(tablet) {
+			padding: 30px 20px;
+			border-radius: 50px;
+		}
+		
+		@include breakpoint(wide) {
+			padding: 30px;
+			border-radius: 60px;
+		}
+
+		@include breakpoint(desktop) {
+			padding: 30px 20px;
+		}
+
+		@include breakpoint(laptop) {
+			padding: 30px;
+		}
+
+		.icon-area {
+			+ .name-area {
+				margin-top: 20px;
+			}
+		}
+
+		.name-area {
+			h5 {
+				font-size: 1.15em;
+				color: $title-highlight-color;
+
+				@include breakpoint(tablet) {
+					font-size: 1.25em;
+				}
+			}
+
+			+ .desc-area {
+				margin-top: 10px;
+			}
+		}
+
+		.desc-area {
+			p {
+				@include breakpoint(desktop) {
+					font-size: 1rem;
+				}
+
+				@include breakpoint(laptop) {
+					font-size: 1.1rem;
+				}
+			}
+		}
+
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: 60px;
+			height: 60px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			
+			@include breakpoint(tablet) {
+				width: 70px;
+				height: 70px;
+			}
+
+			&.icon-delivery {
+				background-image: url('../assets/img/icon/icon-delivery.png');
+			}
+
+			&.icon-map-marker {
+				background-image: url('../assets/img/icon/icon-map-marker.png');
+			}
+
+			&.icon-security {
+				background-image: url('../assets/img/icon/icon-security.png');
+			}
+
+			&.icon-location {
+				background-image: url('../assets/img/icon/icon-location.png');
+			}
+
+			&.icon-pickup {
+				background-image: url('../assets/img/icon/icon-pickup.png');
+			}
+
+			&.icon-scale {
+				background-image: url('../assets/img/icon/icon-scale.png');
+			}
+		}
+	}
+}
+
+.projects-info {
+	.thumbnails {
+		+ .button-area {
+			margin-top: 30px;
+		}
+	}
+}
+
+.news-info {
+	.thumbnails {
+		+ .button-area {
+			margin-top: 30px;
+		}
+	}
+}
+
+.testimonial-info {
+	.testimonial-row {
+		margin-top: -15px;
+		
+		@include breakpoint(tablet) {
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+
+		& > [class*="col-"] {
+			padding: 15px 0;
+
+			@include breakpoint(tablet) {
+				padding: 15px;
+			}
+		}
+	}
+
+	.message-area {
+		position: relative;
+		padding-bottom: 20px;
+
+
+		.box {
+			position: relative;
+			padding: 30px 20px;
+			background-color: $white;
+			border-radius: 50px;
+			box-shadow: 0 0 30px rgba($black, 0.15);
+
+			@include breakpoint(tablet) {
+				border-radius: 60px;
+			}
+
+			@include breakpoint(desktop) {
+				padding: 40px 30px;
+			}
+		}
+
+		.arrow-down {
+			position: absolute;
+			z-index: 1;
+			display: block;
+			width: 28px;
+			height: 20px;
+			left: 60px;
+			bottom: 0;
+			// -webkit-transform: rotate(45deg);
+			// transform: rotate(45deg);
+
+			&:before {
+				content: "";
+				position: absolute;
+				display: block;
+				border-color: transparent;
+				border-style: solid;
+				bottom: 0;
+				border-width: 20px 14px 0;
+				border-top-color: $white;
+				transition: all 0.3s linear;
+			}
+		}
+
+		.quote-icon {
+			font-size: 14rem;
+			line-height: 85%;
+			text-align: center;
+			color: $light-blue;
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			z-index: 0;
+			top: 10px;
+			bottom: initial;
+			left: initial;
+			right: 20px;
+		}
+
+		h4 {
+			font-size: 1.1rem;
+			line-height: 150%;
+			color: $title-color;
+			position: relative;
+			z-index: 1;
+
+			@include breakpoint(small-mobile) {
+				font-size: 1rem;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 1.15rem;
+			}
+		}
+
+		+ .photo-area {
+			margin-top: 10px;
+		}
+	}
+
+	.photo-area {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		gap: 10px;
+
+		.photo {
+			figure {
+				width: 50px;
+				height: 50px;
+				border-radius: 100%;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.name {
+			h5 {
+				font-size: 1.1rem;
+				color: $title-highlight-color;
+
+				@include breakpoint(small-mobile) {
+					font-size: 1rem;
+				}
+
+				+ .jobtitle {
+					margin-top: 8px;
+				}
+			}
+
+			h6 {
+				font-size: 0.85rem;
+				font-style: italic;
+				line-height: 120%;
+				
+				@include breakpoint(small-mobile) {
+					font-size: 0.8rem;
+				}
+
+				+ h6 {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+}
+
+.product-slider {
+	.slider-area {
+		position: relative;
+
+		.image-slider {
+			.content-swipe {
+				position: relative;
+
+				&:before {
+					content: "";
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background-color: rgba($black, 0.3);
+				}
+			}
+
+			figure {
+				position: relative;
+				width: 100%;
+				height: 0;
+				padding: 0 0 66.6%;
+
+				img {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+
+			.desc-area {
+				text-align: center;
+				color: $white;
+				position: absolute;
+				z-index: 1;
+				top: 46%;
+				bottom: initial;
+				left: 0;
+				right: 0;
+				width: 100%;
+				transform: translate(0, -50%);
+
+				.desc-wrapper {
+					padding: 0 20px;
+
+					@include breakpoint(tablet) {
+						padding: 0 6%;
+					}
+
+					@include breakpoint(wide) {
+						padding: 0 8%;
+					}
+
+					@include breakpoint(laptop) {
+						padding: 0 10%;
+					}
+				}
+
+				h4 {
+					font-size: 1.7rem;
+					text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+					
+					@include breakpoint(tablet) {
+						font-size: 2.2rem;
+					}
+
+					+ p {
+						margin-top: 2rem;
+					}
+				}
+
+				p {
+					font-size: 1.1rem;
+					line-height: 150%;
+					text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+					
+					@include breakpoint(wide) {
+						font-size: 1.2rem;
+					}
+					
+					@include breakpoint(desktop) {
+						font-size: 1.3rem;
+					}
+
+					+ .button-area {
+						margin-top: 2rem;
+					}
+				}
+			}
+		}
+
+		.nav-slider {
+			@include breakpoint(tablet) {
+				position: absolute;
+				z-index: 1;
+				top: initial;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+
+			.container {
+				padding: 0;
+			}
+
+			.slider-area {
+				background-color: $blue;
+				padding: 0 0.5rem;
+				
+				@include breakpoint(tablet) {
+					padding: 0 1rem;
+					border-top-left-radius: 30px;
+					border-top-right-radius: 30px;
+				}
+
+				.swiper-container {
+					padding: 0;
+				}
+			}
+
+			.icon-wrapper {
+				text-align: center;
+				padding: 1rem 0.5rem;
+				
+				@include breakpoint(tablet) {
+					padding: 1.4rem 1rem;
+				}
+			}
+
+			.content-swipe {
+				cursor: pointer;
+			}
+
+			.swiper-slide {
+				&.swiper-slide-thumb-active {
+					.icon-area {
+						.icon-product {
+							background-color: $pink;
+						}
+					}
+					
+					.desc-area {
+						h6 {
+							color: $pink;
+						}
+					}
+				}
+			}
+
+			.icon-area {
+				.icon-product {
+					font-size: 1.3rem;
+					text-align: center;
+					line-height: 40px;
+					width: 40px;
+					height: 40px;
+					background-color: $white;
+					color: $blue;
+					margin: 0 auto;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 70%;
+					border-radius: 100%;
+					transition: all 0.3s linear;
+				}
+
+				+ .desc-area {
+					margin-top: 0.6rem;
+				}
+			}
+
+			.desc-area {
+				display: none;
+				
+				@include breakpoint(wide) {
+					display: block;
+				}
+
+				h6 {
+					font-size: 0.9rem;
+					line-height: 120%;	
+					color: $white;
+					transition: all 0.3s linear;
+				}
+			}
+		}
+	}
+}
+
+.brands-slider {
+	.content-swipe {
+		padding: 0.7rem 0;
+		border: 1px solid #ddd;
+		background-color: $white;
+		border-radius: 30px;
+		overflow: hidden;
+
+		@include breakpoint(wide) {
+			padding: 1rem 0;
+		}
+	}
+
+	.image-area {
+	    display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		figure {
+			width: 80%;
+			height: 50px;
+
+			@include breakpoint(wide) {
+				height: 70px;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				object-position: center;
+			}
+		}
+	}
+
+	.slider-area {
+		+ .info-area {
+			margin-top: 2rem;
+
+			@include breakpoint(tablet) {
+				margin-top: 4rem;
+			}
+		}
+	}
+
+	.info-area {
+		text-align: center;
+
+		p {
+			font-size: 1.1rem;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.3rem;
+				padding: 0 20%;
+			}
+		}
+	}
+}
+
+.news-list {
+	.news-wrapper {
+		display: flex;
+		// flex-wrap: wrap;
+		align-items: center;
+		padding: 0.5rem;
+	
+		@include breakpoint(wide) {
+			padding: 1rem;
+		}
+	}
+
+	.news-date {
+		h4 {
+			font-size: 1.8rem;
+			line-height: 100%;
+			text-align: center;
+			width: 80px;
+			height: 80px;
+			padding: 16px 10px;
+			background-color: $button-background;
+			color: $blue;
+			border-radius: 100%;
+
+			@include breakpoint(wide) {
+				font-size: 2.4rem;
+				width: 100px;
+				height: 100px;
+				padding: 20px 10px;
+			}
+
+			small {
+				font-size: 60%;
+				text-transform: uppercase;
+				line-height: 100%;
+				display: block;
+				margin-top: 4px;
+			}
+		}
+	}
+
+	.news-title {
+		padding-left: 10px;
+
+		h5 {
+			font-size: 1.3rem;
+			line-height: 130%;
+			color: $title-color;
+			
+			@include breakpoint(wide) {
+				font-size: 1.5rem;
+			}
+
+			a {
+				color: $body-color;
+
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+}
+
+.section-contact {
+	.info-area {
+		text-align: center;
+	}
+
+	.info-text {
+		@include breakpoint(tablet) {
+			padding: 0 10%;
+		}
+
+		@include breakpoint(wide) {
+			padding: 0 20%;
+		}
+
+		h5 {
+			line-height: 130%;
+
+			@include breakpoint(tablet) {
+				font-size: 1.3rem;
+			}
+
+			@include breakpoint(wide) {
+				font-size: 1.5rem;
+			}
+		}
+
+		+ .button-area {
+			margin-top: 2rem;
+			
+			@include breakpoint(tablet) {
+				margin-top: 4rem;
+			}
+		}
+	}
+}
+

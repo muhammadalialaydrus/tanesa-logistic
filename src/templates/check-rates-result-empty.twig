@@ -1,0 +1,147 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'check-rates-result' %}
+{% set head_title = 'Cek Tarif' %}
+{% block page %}
+
+			<div class="page-content">
+				<div class="check-rates-result-page">
+					<section class="header-page">
+						<div class="header-wrapper">
+							<div class="container">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item" data-aos="fade-in">
+											<a href="index.html">
+												<span class="fa fa-home"></span>
+											</a>
+										</li>
+										<li class="breadcrumb-item" data-aos="fade-in">
+											<a href="check-rates.html">
+												Cek Tarif
+											</a>
+										</li>
+										<li class="breadcrumb-item active" data-aos="fade-in" aria-current="page">Bekasi to Surabaya</li>
+									</ol>
+								</nav>
+								<div class="title-cover">
+									<div class="row align-items-start">
+										<div class="col-md-6">
+											<div class="title-page">
+												<h6 data-aos="fade-in">Pengiriman Cargo Darat dari</h6>
+												<h2 class="font-text-semibold" data-aos="fade-in">
+													Bekasi ke Surabaya
+												</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="check-rates-result-section overflow-init">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="filter-result" data-aos="zoom-in">
+										<h5 class="font-text-semibold">Filter</h5>
+										<div class="custom-form">
+											<form class="form">
+												<div class="form-row">
+													<div class="form-group col-md-6 col-lg-12">
+														<label class="label-form font-text-semibold" for="originCityField">Kota Asal</label>
+														<input type="text" class="form-control" id="originCityField" name="originCity" placeholder="Masukkan Kota Asal..." required>
+													</div>
+													<div class="form-group col-md-6 col-lg-12">
+														<label class="label-form font-text-semibold" for="destinationCityField">Kota Tujuan</label>
+														<input type="text" class="form-control" id="destinationCityField" name="destinationCity" placeholder="Masukkan Kota Tujuan..." required>
+													</div>
+													<div class="form-group col-md-6 col-lg-12">
+														<label class="label-form font-text-semibold" for="transportTypeField">Tipe Transport</label>
+														<select class="form-control" id="transportTypeField" name="transportType">
+															<option value="" class="placeholder" hidden>Pilih Tipe Transport</option>
+															<option value="">All Freight</option>
+															<option value="">Land Freight</option>
+															<option value="">Air Freight</option>
+															<option value="">Sea Freight</option>
+														</select>
+													</div>
+													<div class="form-group col-md-6 col-lg-12">
+														<label class="label-form font-text-semibold" for="loadTypeField">Jenis Muatan</label>
+														<select class="form-control" id="loadTypeField" name="loadType">
+															<option value="" class="placeholder" hidden>Pilih Jenis Muatan</option>
+															<option value="">FCL</option>
+															<option value="">LCL</option>
+														</select>
+													</div>
+													<div class="form-group col-md-6 col-lg-12">
+														<label class="label-form font-text-semibold" for="serviceTypeField">Tipe Layanan</label>
+														<select class="form-control" id="serviceTypeField" name="serviceType">
+															<option value="" class="placeholder" hidden>Pilih Tipe Layanan</option>
+															<option value="">REGULAR</option>
+															<option value="">REGPACK</option>
+															<option value="">ONEPACK</option>
+														</select>
+													</div>
+												</div>
+												<div class="button-area">
+													<a href="check-rates-result.html" class="button full-rounded full-width font-text-semibold">Cari</a>
+													<!-- <button class="button full-rounded full-width font-text-semibold" type="submit">Cari</button> -->
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<div class="content-result">
+										<div class="tab-filter-area">
+											<div class="tab-filter-wrapper">
+												<div class="tab-area">
+													<ul data-aos="zoom-in">
+														<li>
+															<a href="#" class="font-text-semibold tab-item active">All Freight</a>
+														</li>
+														<li>
+															<a href="#" class="font-text-semibold tab-item">Sea & Air Freight</a>
+														</li>
+														<li>
+															<a href="#" class="font-text-semibold tab-item">Land Freight</a>
+														</li>
+													</ul>
+												</div>
+												<div class="filter-area">
+													<div class="filter-group">
+														<div class="filter-list font-text-semibold" data-aos="zoom-in">
+															<select class="form-control" id="priceField" name="price">
+																<option value="" class="placeholder" hidden>Urutkan Harga</option>
+																<option value="">Termurah</option>
+																<option value="">Tertinggi</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="content-area">
+											<div class="empty-card text-center" data-aos="zoom-in">
+												<div class="no-post">
+													<div class="wrapper">
+														<h4 class="font-text-semibold">Ooppsss...</h5>
+														<p>Tidak ada hasil Ditemukan</p>
+													</div>
+												</div>
+												<div class="needmore">
+													<h5>
+														Need more? Leave a <a href="request-quotation.html" class="font-text-semibold">Request</a>
+													</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+{% endblock %}

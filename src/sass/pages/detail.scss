@@ -1,0 +1,886 @@
+.blog-detail-inside {
+	.header-detail {
+		.tags {
+			h6 {
+				padding-top: 3px;
+
+				@include breakpoint(tablet) {
+					font-size: 0.9em;
+				}
+			}
+		}
+
+		+ .content-detail {
+			margin-top: 32px;
+		}
+	}
+
+	.tag-badge {
+		// display: flex;
+		// flex-wrap: wrap;
+		// align-items: center;
+		// justify-content: space-between;
+
+		.badges {
+			+ .tags {
+				margin-top: 24px;
+			}
+		}
+
+		+ .title-detail {
+			margin-top: 16px;
+		}
+	}
+	
+	.title-detail {
+		h2 {
+			font-size: 1.5rem;
+			line-height: 120%;
+			color: $title-color;
+
+			@include breakpoint(tablet) {
+				font-size: 2rem;
+			}
+		}
+
+		+ .author-bookmark {
+			margin-top: 24px;
+		}
+	}
+
+	.content-detail {
+		.image-area {
+			img {
+				width: 100%;
+			}
+
+			+ .article-area {
+				margin-top: 2rem;
+			}
+		}
+
+		.content-foot {
+			padding: 40px 0;
+
+			+ .content-foot {
+				border-top: 1px solid $border-light;
+			}
+		}
+	}
+
+	.article-area {
+		.image-area {
+			+ article {
+				margin-top: 2rem;
+			}
+		}
+
+		article {
+			font-size: 1rem;
+			line-height: 150%;
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				color: $title-color;
+				font-family: 'montserrat-semibold';
+				margin-bottom: 1em;
+				line-height: 130%;
+
+				+ ul,
+				+ ol,
+				+ p,
+				+ h1,
+				+ h2,
+				+ h3,
+				+ h4,
+				+ h5,
+				+ h6,
+				+ .quote,
+				+ figure {
+					margin-top: 1.5em;
+				}
+			}
+
+			p {
+				line-height: 150%;
+
+				+ ul,
+				+ ol,
+				+ h1,
+				+ h2,
+				+ h3,
+				+ h4,
+				+ h5,
+				+ h6,
+				+ .quote,
+				+ figure {
+					margin-top: 1.5em;
+				}
+			}
+
+			a {
+				text-decoration: underline;
+				// color: $dark;
+
+				// &:hover {
+				// 	color: $link-color;
+				// }
+			}
+
+			ol,
+			ul {
+				padding-left: 30px;
+
+				li {
+					font-size: 1.05em;
+					line-height: 150%;
+					
+					@include breakpoint(wide) {
+						font-size: 1.15em;
+					}
+
+					p {
+						font-size: 1em;
+					}
+
+					+ li {
+						margin-top: 10px;
+					}
+				}
+
+				+ ul,
+				+ ol,
+				+ p,
+				+ h1,
+				+ h2,
+				+ h3,
+				+ h4,
+				+ h5,
+				+ h6,
+				+ .quote,
+				+ figure {
+					margin-top: 1.5em;
+				}
+			}
+
+			figure {
+				img {
+					width: 100%;
+
+					+ figcaption {
+						margin-top: 4px;
+					}
+				}
+
+				figcaption {
+					font-size: 0.75em;
+					text-align: right;
+					color: $semi-grey;
+					margin-top: 8px;
+					
+					@include breakpoint(tablet) {
+						font-size: 0.85em;
+					}
+				}
+
+				+ ul,
+				+ ol,
+				+ p,
+				+ h1,
+				+ h2,
+				+ h3,
+				+ h4,
+				+ h5,
+				+ h6,
+				+ .quote,
+				+ figure {
+					margin-top: 1.5em;
+				}
+			}
+
+			+ .image-area {
+				margin-top: 2rem;
+			}
+		}
+
+		.quote {
+			position: relative;
+			padding-top: 32px;
+			padding-left: 32px;
+			padding-bottom: 16px;
+			
+			@include breakpoint(tablet) {
+				padding-left: 50px;
+			}
+
+			.icon {
+				font-size: 8rem;
+				line-height: 100%;
+				color: $semi-blue;
+				position: absolute;
+				z-index: 0;
+				top: 0;
+				bottom: initial;
+				left: 0;
+				right: initial;
+				
+				@include breakpoint(tablet) {
+					font-size: 12rem;
+					top: -5%;
+				}
+			}
+
+			blockquote {
+				position: relative;
+				z-index: 1;
+				font-size: 1.6rem;
+				line-height: 130%;
+				font-style: italic;
+				color: $button-hover-background;
+				
+				@include breakpoint(tablet) {
+					font-size: 2.2rem;
+				}
+			}
+
+			.name {
+				font-size: 1.1rem;
+				font-style: italic;
+				color: $body-color;
+				margin: 0;
+				
+				@include breakpoint(tablet) {
+					font-size: 1.3rem;
+				}
+			}
+
+			+ ul,
+			+ ol,
+			+ p,
+			+ h1,
+			+ h2,
+			+ h3,
+			+ h4,
+			+ h5,
+			+ h6,
+			+ .quote,
+			+ figure {
+				margin-top: 1.5em;
+			}
+		}
+
+		+ .share-area {
+			border-top: 1px solid $border-light;
+			margin-top: 6rem;
+		}
+
+		+ .button-publish {
+			margin-top: 6rem;
+		}
+	}
+
+	.share-area {
+		text-align: left;
+		padding: 0;
+
+		.share-label {
+			@include breakpoint(tablet) {
+				display: none;
+			}
+
+			@include breakpoint(wide) {
+				display: inline-block;
+			}
+
+			span {
+				font-size: 1rem;
+			}
+
+			+ .social {
+				margin-top: 1rem;
+			}
+		}
+
+		.social {
+			padding: 0;
+
+			li {
+				margin: 0;
+				vertical-align: middle;
+
+				+ li {
+					margin: 0 0 0 4px;
+				}
+
+				&.linkedin {
+					a {
+						&:hover {
+							background-color: $linkedin;
+						}
+					}
+				}
+
+				&.facebook {
+					a {
+						&:hover {
+							background-color: $facebook;
+						}
+					}
+				}
+
+				&.twitter {
+					a {
+						&:hover {
+							background-color: $black;
+
+							.icon-custom {
+								background-image: url('../assets/img/icon-x_twitter1-white.png');
+							}
+						}
+					}
+				}
+
+				&.whatsapp {
+					a {
+						&:hover {
+							background-color: $whatsapp;
+						}
+					}
+				}
+
+				&.link {
+					a {
+						&:hover {
+							background-color: $link-color;
+						}
+					}
+				}
+			}
+		}
+
+
+		a {
+			font-size: 1.3em;
+			line-height: 100%;
+			text-align: center;
+			color: $title-color;
+			display: block;
+			background-color: $semi-blue;
+			width: 36px;
+			height: 36px;
+			padding: 9px 0;
+			border-radius: 100%;
+			transition: all 0.3s linear;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.4em;
+				width: 40px;
+				height: 40px;
+				padding: 10px 0;
+			}
+
+			@include breakpoint(wide) {
+				font-size: 1.5em;
+				width: 44px;
+				height: 44px;
+				padding: 11px 0;
+			}
+
+			&:hover {
+				color: $white;
+				background-color: $link-color;
+			}
+		}
+
+		.icon-custom {
+			display: block;
+			width: 18px;
+			height: 18px;
+			margin: 0 auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../assets/img/icon-x_twitter1.png');
+			
+			@include breakpoint(tablet) {
+				width: 20px;
+				height: 20px;
+			}
+			
+			@include breakpoint(wide) {
+				width: 22px;
+				height: 22px;
+			}
+		}
+	}
+
+	.author-area {
+		.wrapper {
+			text-align: center;
+			padding: 24px;
+			background-color: $semi-blue;
+			border-radius: 30px;
+			
+			@include breakpoint(tablet) {
+				text-align: left;
+				padding: 32px;
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+				gap: 16px;
+			}
+		}
+
+		.image-area {
+			figure {
+				.images {
+					width: 150px;
+					height: 150px;
+					position: relative;
+					margin: 0 auto;
+					
+					@include breakpoint(tablet) {
+						margin: 0;
+					}
+				}
+
+				img {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				.text-logo {
+					font-size: 5em;
+					text-align: center;
+					line-height: 150px;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+					background-color: $button-background;
+					color: $white;
+					border-radius: 100%;
+				}
+			}
+
+			+ .info-area {
+				margin-top: 16px;
+				
+				@include breakpoint(tablet) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.info-area {
+			h6 {
+				font-size: 0.85em;
+				text-transform: uppercase;
+				letter-spacing: 0.5pt;
+				color: $body-color;
+
+				+ h4 {
+					margin-top: 8px;
+				}
+			}
+
+			h4 {
+				font-size: 1.4em;
+				color: $title-color;
+				
+				@include breakpoint(tablet) {
+					font-size: 1.6em;
+				}
+
+				a {
+					color: $title-color;
+
+					&:hover {
+						color: $link-color;
+					}
+				}
+
+				+ p {
+					margin-top: 8px;
+				}
+			}
+
+			p {
+				font-size: 0.9em;
+				color: $body-color;
+
+				@include breakpoint(tablet) {
+					font-size: 1em;
+				}
+			}
+		}
+	}
+
+	.history-post {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.post-list {
+			flex-basis: 0;
+			flex-grow: 1;
+			width: 100%;
+			flex: 0 0 100%;
+			
+			@include breakpoint(tablet) {
+				width: 48%;
+				flex: 0 0 48%;
+				gap: 16px;
+			}
+			
+			@include breakpoint(desktop) {
+				width: 49%;
+				flex: 0 0 49%;
+			}
+
+			&:hover {
+				.post-wrapper {
+					background-color: $button-background;
+				}
+
+				h6 {
+					color: $body-color;
+					color: rgba($white, 0.5);
+				}
+
+				h5 {
+					color: $white;
+				}
+			}
+			
+			+ .post-list {
+				margin-top: 1rem;
+
+				@include breakpoint(tablet) {
+					text-align: right;
+					margin-top: 0;
+				}
+			}
+		}
+
+		.post-wrapper {
+			position: relative;
+			background-color: $semi-blue;
+			padding: 16px 20px;
+			overflow: hidden;
+			border-radius: 30px;
+			transition: all 0.3s linear;
+			
+			@include breakpoint(wide) {
+				padding: 1.4rem 2rem 1.6rem;
+			}
+		}
+
+		h6 {
+			font-size: 0.85rem;
+			text-transform: uppercase;
+			color: $body-color;
+			transition: all 0.3s linear;
+
+			+ h5 {
+				margin-top: 4px;
+			}
+		}
+
+		h5 {
+			font-size: 1.1rem;
+			color: $title-color;
+			transition: all 0.3s linear;
+			
+			@include breakpoint(wide) {
+				font-size: 1.2rem;
+			}
+		}
+
+		.click-area {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.input-comments-area {
+		border-bottom: 1px solid $border-light;
+
+		.info-alert {
+			text-align: center;
+
+			a {
+				text-decoration: underline;
+			}
+
+			+ .comments {
+				margin-top: 32px;
+			}
+		}	
+	}
+
+	.comments {
+		.input-area {
+			.form-group {
+				margin: 0;
+				
+				+ .form-group {
+					margin-top: 16px;
+				}
+			}
+
+			.form-control {
+				border: 0;
+				background-color: $semi-blue;
+				color: $title-color;
+				padding: 16px;
+				border-radius: 30px;
+
+				&::placeholder {
+					font-style: italic;
+					color: $body-color;
+				}
+			}
+
+			textarea {
+				&.form-control {
+					height: 130px;
+					resize: none;
+				}
+
+				&:focus {
+					box-shadow: 0 0 0 .2rem rgba($button-hover-background, 0.25);
+				}
+			}
+
+			.comment-counter {
+				font-size: 0.9em;
+				color: $body-color;
+			}
+
+			.flex-wrapper {
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			+ .comment-inside {
+				margin-top: 32px;
+			}
+		}
+
+		.comment-inside {
+			.comment-list {
+				padding: 0;
+				list-style: none;
+
+				li {
+					+ li {
+						margin-top: 32px;
+					}
+				}
+
+				.post-group {
+					+ .comment-list {
+						margin-top: 24px;
+					}
+				}
+
+				.comment-list {
+					padding-left: 32px;
+
+					@include breakpoint(tablet) {
+						padding-left: 66px;
+					}
+				}
+
+			}
+
+			.post-wrapper {
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: flex-start;
+				gap: 8px;
+			
+				@include breakpoint(tablet) {
+					gap: 16px;
+				}
+			}
+
+			.avatar-area {
+				figure {
+					.images {
+						width: 40px;
+						height: 40px;
+						position: relative;
+						
+						@include breakpoint(tablet) {
+							width: 50px;
+							height: 50px;
+						}
+					}
+
+					img {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+
+					.text-logo {
+						font-size: 1.4em;
+						text-align: center;
+						line-height: 40px;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						width: 100%;
+						height: 100%;
+						background-color: $link-color;
+						color: $white;
+						
+						@include breakpoint(tablet) {
+							font-size: 2em;
+							line-height: 50px;
+						}
+					}
+				}
+			}
+
+			.name-date {
+				h5 {
+					font-size: 1.15em;
+					
+					@include breakpoint(tablet) {
+						font-size: 1.2em;
+					}
+
+					+ h6 {
+						margin-top: 4px;
+					}
+				}
+
+				h6 {
+					color: $body-color;
+					font-size: 0.85em;
+					
+					@include breakpoint(tablet) {
+						font-size: 0.9em;
+					}
+				}
+
+				+ .content-comment {
+					margin-top: 16px;
+				}
+			}
+
+			.content-comment {
+				p {
+					color: $title-color;
+				}
+
+				+ .vote-reply {
+					margin-top: 16px;
+				}
+			}
+			
+			.vote-reply {
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+				gap: 16px;
+
+				a {
+					font-size: 0.9em;
+					color: $body-color;
+					
+					@include breakpoint(tablet) {
+						font-size: 1em;
+					}
+
+					&:hover {
+						color: $link-color;
+					}
+
+					&.active {
+						color: $link-color;
+
+						.icon {
+							font-weight: 900;
+						}
+					}
+				}
+
+				.vote {
+					ul {
+						padding: 0;
+						display: flex;
+						flex-wrap: nowrap;
+						align-items: center;
+
+						li {
+							margin: 0;
+
+							span {
+								+ span {
+									margin-left: 4px;
+								}
+							}
+
+							+ li {
+								padding-left: 16px;
+								margin-left: 16px;
+								border-left: 1px solid $border-light;
+							}
+						}
+					}
+
+					+ .reply {
+						padding-left: 20px;
+
+						&:before {
+							content: "";
+							width: 4px;
+							height: 4px;
+							background-color: $body-color;
+							border-radius: 100%;
+							position: absolute;
+							top: 50%;
+							bottom: initial;
+							left: 0;
+							right: initial;
+							margin-top: -2px;
+						}
+					}
+				}
+
+				.reply {
+					position: relative;
+				}
+			}
+		}
+	}
+}

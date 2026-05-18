@@ -1,0 +1,284 @@
+.tracking-page {
+	.tracking-section {
+		.container {
+			& > .row {
+				& > [class*="col-"] {
+					+ [class*="col-"] {
+						margin-top: 50px;
+						
+						@include breakpoint(wide) {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.tracking-timeline {
+		position: relative;
+		margin-left: 12px;
+
+		.timeline-list {
+			&:first-child {
+				.timeline-wrapper {
+					&:before {
+						height: 50%;
+						top: auto;
+						bottom: 0;
+					}
+				}
+
+				&:last-child {
+					.timeline-wrapper {
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&:last-child {
+				.timeline-wrapper {
+					&:before {
+						height: 50%;
+						top: 0;
+						bottom: auto;
+					}
+				}
+			}
+
+			&.current {
+				.timeline-wrapper {
+					&:after {
+						border-color: $button-hover-background;
+						animation: pulse-animation 2s infinite;
+					}
+				}
+			}
+
+			&.completed {
+				.timeline-wrapper {
+					&:after {
+						border-color: $green;
+						animation: pulse-animation-green 2s infinite;
+					}
+				}
+
+				.timeline-box {
+					background-color: #F3FDF9;
+
+					&:before {
+						border-right-color: #F3FDF9;
+					}
+				}
+
+				.timeline-content {
+					h5 {
+						color: $green;
+					}
+				}
+
+				.timeline-date {
+					h6 {
+						color: rgba($green, 0.7);
+					}
+					
+					.dots {
+						background-color: rgba($green, 0.7);
+					}
+				}
+			}
+		}
+
+		.timeline-wrapper {
+			position: relative;
+			padding: 10px 0 10px 30px;
+
+			&:before {
+				content: "";
+				width: 1px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				bottom: auto;
+				left: 0;
+				right: auto;
+				background-color: $border-light;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				bottom: auto;
+				left: auto;
+				right: calc(100% - 12px);
+				width: 24px;
+				height: 24px;
+				margin-top: -12px;
+				background-color: $white;
+				border: 5px solid $text-light;
+				border-radius: 50%;
+				z-index: 1;
+			}
+		}
+
+		.timeline-box {
+			position: relative;
+			padding: 30px 20px;
+			background-color: $white;
+			border-radius: 40px;
+			box-shadow: 0 0 20px rgba($black, 0.15);
+			
+			@include breakpoint(tablet) {
+				padding: 30px;
+			}
+
+			&:before {
+				content: "";
+				height: 0;
+				position: absolute;
+				top: 50%;
+				width: 0;
+				z-index: 1;
+				left: auto;
+				right: 100%;
+				margin-top: -10px;
+				border: solid transparent;
+				border-right: solid $white;
+				border-width: 10px 10px 10px 0;
+			}
+		}
+
+		.timeline-content {
+			h5 {
+				font-size: 1rem;
+				line-height: 130%;
+				margin: 0;
+				color: $title-color;
+
+				@include breakpoint(tablet) {
+					font-size: 1.1rem;
+				}
+
+				+ p {
+					margin-top: 10px;
+				}
+			}
+
+			+ .timeline-date {
+				margin-top: 10px;
+			}
+		}
+
+		.timeline-date {
+			ul {
+				padding: 0;
+				list-style: none;
+				display: flex;
+				flex-wrap: nowrap;
+				// justify-content: center;
+				align-items: center;
+				gap: 10px;
+
+				li {
+					margin: 0;
+				}
+			}
+
+			.dots {
+				width: 4px;
+				height: 4px;
+				display: block;
+				background-color: $body-color;
+				border-radius: 50%;
+			}
+
+			h6 {
+				font-size: 0.8rem;
+				line-height: 110%;
+				
+				@include breakpoint(tablet) {
+					font-size: 0.9rem;
+				}
+			}
+
+			+ .timeline-content {
+				margin-top: 10px;
+			}
+
+			+ .timeline-photos {
+				margin-top: 20px;
+			}
+		}
+
+		.timeline-photos {
+			ul {
+				padding: 0;
+				list-style: none;
+				display: flex;
+				flex-wrap: nowrap;
+				// justify-content: center;
+				align-items: center;
+				gap: 10px;
+
+				li {
+					margin: 0;
+				}
+			}
+
+			.images {
+				width: 60px;
+				height: 60px;
+				
+				@include breakpoint(tablet) {
+					width: 100px;
+					height: 100px;
+				}
+				
+				@include breakpoint(wide) {
+					width: 70px;
+					height: 70px;
+				}
+				
+				@include breakpoint(desktop) {
+					width: 100px;
+					height: 100px;
+				}
+
+				figure {
+					width: 100%;
+					height: 0;
+					padding: 0 0 100%;
+					position: relative;
+					border-radius: 16px;
+					overflow: hidden;
+					
+					@include breakpoint(tablet) {
+						border-radius: 26px;
+					}
+					
+					@include breakpoint(wide) {
+						border-radius: 20px;
+					}
+					
+					@include breakpoint(desktop) {
+						border-radius: 26px;
+					}
+
+					img {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,117 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'request-quotation' %}
+{% set head_title = 'Cek Tarif' %}
+{% block page %}
+
+			<div class="page-content">
+				<div class="request-quotation-page">
+					<section class="header-page">
+						<div class="header-wrapper">
+							<div class="container">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item" data-aos="fade-in">
+											<a href="index.html">
+												<span class="fa fa-home"></span>
+											</a>
+										</li>
+										<li class="breadcrumb-item active" data-aos="fade-in" aria-current="page">Request for Quotation</li>
+									</ol>
+								</nav>
+								<div class="title-cover">
+									<div class="row align-items-start">
+										<div class="col-md-6">
+											<div class="title-page">
+												<h2 class="font-text-semibold" data-aos="fade-in">
+													Request for Quotation
+												</h2>
+												<h6 data-aos="fade-in">Pilih kota asal dan tujuan pengiriman, lalu pilih jenis pengiriman sesuai kebutuhan bisnis Anda.</h6>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="request-quotation-section overflow-init">
+						<div class="container">
+							<div class="custom-form">
+								<form action="" class="form">
+									<div class="form-card">										
+										<div class="row justify-content-center">
+											<div class="col-md-10 col-xl-8">
+												<div class="form-box" data-aos="zoom-in">
+													<h5 class="form-group-label font-text-semibold">Freight Detail</h5>
+													<div class="form-row">
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="originCityField">Kota Asal</label>
+															<input type="text" class="form-control" id="originCityField" name="originCity" placeholder="Masukkan Kota Asal..." required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="destinationCityField">Kota Tujuan</label>
+															<input type="text" class="form-control" id="destinationCityField" name="destinationCity" placeholder="Masukkan Kota Tujuan..." required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="transportTypeField">Tipe Transport</label>
+															<select class="form-control" id="transportTypeField" name="transportType">
+																<option value="" class="placeholder" hidden>Pilih Tipe Transport</option>
+																<option value="">All Freight</option>
+																<option value="">Land Freight</option>
+																<option value="">Air Freight</option>
+																<option value="">Sea Freight</option>
+															</select>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="loadTypeField">Jenis Muatan</label>
+															<select class="form-control" id="loadTypeField" name="loadType">
+																<option value="" class="placeholder" hidden>Pilih Jenis Muatan</option>
+																<option value="">FCL</option>
+																<option value="">LCL</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-10 col-xl-8">
+												<div class="form-box" data-aos="zoom-in">
+													<h5 class="form-group-label font-text-semibold">PIC Detail</h5>
+													<div class="form-row">
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="nameField">Name</label>
+															<input type="text" class="form-control" id="nameField" name="name" placeholder="PIC Name..." required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="emailField">Email</label>
+															<input type="email" class="form-control" id="emailField" name="email" placeholder="PIC Email..." required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="phoneField">Phone</label>
+															<input type="text" class="form-control" id="phoneField" name="phoneField" placeholder="PIC Phone..." required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="notesField">Notes</label>
+															<input type="text" class="form-control" id="notesField" name="notesField" placeholder="Notes..." required>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="button-area">
+										<ul>
+											<li data-aos="zoom-in">
+												<a href="check-rates-result-empty.html" class="button white full-rounded font-text-semibold">Kembali</a>
+											</li>
+											<li data-aos="zoom-in">
+												<button class="button full-rounded font-text-semibold" type="submit">Dapatkan Penawaran</button>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+{% endblock %}

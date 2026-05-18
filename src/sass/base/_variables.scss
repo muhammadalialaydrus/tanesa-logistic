@@ -1,0 +1,148 @@
+/**
+ * Variables
+ */
+
+ // FONT FAMILY
+$font_idx: 1;
+// $font_default: Helvetica, Arial, sans-serif !default;
+$font_default: 'montserrat-light';
+$font-path:	"../assets/fonts" !default;
+
+// Fonts
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base: 14px;
+$line-height-base: 1.5;
+
+// Transition
+$transition-base: all .3s ease-in-out;
+
+/**
+ * Typography Variables
+ */
+
+// Paragraph
+$paragraph-margin-bottom: 1rem;
+
+// Headings
+$headings-margin-bottom: 0;
+$headings-font-family: $font_default;
+$headings-font-weight: 500;
+$headings-line-height: inherit;
+$headings-color: inherit;
+
+// Headings Font Size
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// Default color
+$navy: #0F698D;
+$semi-dark-navy: #01334C;
+$dark-navy: #002538;
+$black-navy: #073145;
+$light-orange: #E1A03D;
+$orange: #E08E0E;
+$yellow: #FFCD04;
+$light-blue: #EDF1F5;
+$semi-blue: #D7E3EB;
+$text-light: #9EADBC;
+$text-semi-dark: #7a8b9b;
+$text-dark: $dark-navy;
+$text-semi-white: rgba($white, 0.7);
+$light-green: #2CC926;
+$green: #059E51;
+$border-light: #d1dbe6;
+
+
+
+$pink: #DF3C71;
+$semi-pink: #EDD8EB;
+$light-pink: #ECEAF5;
+$dark-blue: #0A4584;
+$red: #CA4A45;
+
+
+
+$blue: #1A73E8;
+// $light-blue: #F1F5F9;
+$text-semi-blue: #879DB2;
+$bg-light-blue: #E5F0FF;
+$semi-dark-blue: #005CD5;
+$tosca: #00B894;
+$black: #000;
+$dark: #0F172A;
+$grey: #444;
+// $semi-grey: #999999;
+$semi-grey: #747b8c;
+$light-gray: #DFDFDF;
+$border-gray: #E5E5E5;
+
+$transparent-blue: rgba($blue, 0.7);
+$white: #FFFFFF;
+$gold: #c09e49;
+$dark-gold: #806728;
+$semi-dark-gold: #a17e2c;
+$brown: #ab7d4e;
+$semi-brown: #ae957b;
+$transparent: transparent;
+
+// Button
+$button-background: $orange;
+$button-hover-background: $navy;
+$button-color: $white;
+$button-hover-color: $white;
+
+$box-highlight: $white;
+$body-background: $light-blue;
+$title-color: $semi-dark-navy;
+$title-highlight-color: $navy;
+// $body-color: $text-light;
+$body-color: $text-semi-dark;
+$text: $body-color;
+
+// $footer-background: #CFE3ED;
+$footer-background: $dark-navy;
+$footer-background-darker: $black;
+
+// Links
+$link-color: $orange;
+$link-alt-color: $yellow;
+$link-decoration: none;
+$link-hover-color: darken($button-background, 10%);
+$link-hover-decoration: underline;
+
+// Social Media
+$facebook: #5d82d1;
+$twitter: #40bff5;
+$gplus: #d95946;
+$pinterest: #bd081c;
+$whatsapp: #5CB100;
+$youtube: #FF0000;
+$linkedin: #0b66c2;
+
+
+// Media Query
+$media-query:
+	(imac-retina, (min-width: 2048px)),
+	(imac-large, (min-width: 1920px)),
+	(imac, (min-width: 1700px)),
+	(large-desktop, (min-width: 1500px)),
+	(laptop, (min-width: 1366px)),
+	(wide-laptop, (min-width: 1441px)),
+	(height-laptop, (max-height: 1200px)),
+	(desktop, (min-width: 1200px)),
+	(height-imac, (min-height: 1010px)),
+	(height-desktop, (min-height: 850px)),
+	(wide, (min-width: 992px)),
+	(width-tablet-landscape, (max-width: 1024px)),
+	(width-tablet, (max-width: 992px)),
+	(width-tablet-portrait, (max-width: 768px)),
+	(tablet, (min-width: 768px)),
+	(mobile, (max-width: 767px)),
+	(mobile-landscape, (min-width: 666px)),
+	(mobile-iphone, (max-width: 376px)),
+	(small-mobile, (max-width: 360px));
+

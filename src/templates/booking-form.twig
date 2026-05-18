@@ -1,0 +1,198 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'booking-form' %}
+{% set head_title = 'Cek Tarif' %}
+{% block page %}
+
+			<div class="page-content">
+				<div class="booking-form-page">
+					<section class="header-page">
+						<div class="header-wrapper">
+							<div class="container">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item" data-aos="fade-in">
+											<a href="index.html">
+												<span class="fa fa-home"></span>
+											</a>
+										</li>
+										<li class="breadcrumb-item" data-aos="fade-in">
+											Booking
+										</li>
+										<li class="breadcrumb-item active" data-aos="fade-in" aria-current="page">Land Freight Booking</li>
+									</ol>
+								</nav>
+								<div class="title-cover">
+									<div class="row align-items-start">
+										<div class="col-md-6">
+											<div class="title-page">
+												<h2 class="font-text-semibold" data-aos="fade-in">
+													Booking Form
+												</h2>
+												<h6 data-aos="fade-in">Please enter the required information for booking process.</h6>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="booking-form-section overflow-init">
+						<div class="container">
+							<div class="step-booking">
+								<div class="row justify-content-center">
+									<div class="col-lg-11 col-xl-9">
+										<ul data-aos="zoom-in">
+											<li>
+												<a href="#" class="step-item completed font-text-semibold">
+													<span class="icon-number">1</span>
+													<span>Freight Details</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="step-item active font-text-semibold">
+													<span class="icon-number">2</span>
+													<span>Detail Information</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="step-item font-text-semibold">
+													<span class="icon-number">3</span>
+													<span>Booking Summary</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="custom-form">
+								<form action="" class="form">
+									<div class="form-card">										
+										<div class="row justify-content-center">
+											<div class="col-md-10 col-xl-8">
+												<div class="form-box" data-aos="zoom-in">
+													<h5 class="form-group-label font-text-semibold">Freight Detail</h5>
+													<div class="form-row">
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="pickupAddressField">Pickup Address</label>
+															<input type="text" class="form-control" id="pickupAddressField" name="pickupAddress" placeholder="Pickup Address" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="deliveryAddressField">Delivery Address</label>
+															<input type="text" class="form-control" id="deliveryAddressField" name="deliveryAddress" placeholder="Delivery Address" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="pickupScheduleField">Pickup Schedule</label>
+															<input type="text" class="form-control" id="pickupScheduleField" name="pickupSchedule" placeholder="Pickup Schedule" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="">Service</label>
+															<p class="info-text">
+																Include Standard Service
+																<i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Services include vehicles, drivers, gasoline, loading and unloading, parking, return documents via express courier, and waiting time."></i>
+															</p>
+														</div>
+														{# <div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="">Pickup - Delivery Routes</label>
+															<div class="map-area"></div>
+														</div> #}
+													</div>
+												</div>
+											</div>
+											<div class="col-md-10 col-xl-8">
+												<div class="form-box" data-aos="zoom-in">
+													<h5 class="form-group-label font-text-semibold">Cargo Details</h5>
+													<div class="form-row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" name="insuranceCheckbox" id="insurance" value="Option 1">
+															<label class="form-check-label font-text-semibold" for="insurance">Asuransi</label>
+														</div>
+													</div>
+													<div class="form-row">
+														{# <div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="quantityField">Asuransi</label>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="insuranceCheckbox" id="insurance" value="Option 1">
+																<label class="form-check-label font-text-semibold" for="insurance">Asuransi</label>
+															</div>
+														</div> #}
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="quantityField">Quantity</label>
+															<input type="text" class="form-control" id="quantityField" name="quantity" placeholder="Quantity" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="packagingUnitField">Packaging Unit</label>
+															<select class="form-control" id="packagingUnitField" name="packagingUnit">
+																<option value="" class="placeholder" hidden>Pilih Packaging Unit</option>
+																<option value="">Crate</option>
+																<option value="">Drum</option>
+																<option value="">Bucket</option>
+																<option value="">Liftvans</option>
+																<option value="">Package</option>
+																<option value="">Pail</option>
+																<option value="">Pallet</option>
+																<option value="">Piece</option>
+																<option value="">Plywood Case</option>
+															</select>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="lengthField">Length (CM)</label>
+															<input type="email" class="form-control" id="lengthField" name="length" placeholder="Length (CM)" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="widthField">Width (CM)</label>
+															<input type="text" class="form-control" id="widthField" name="width" placeholder="Width (CM)" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="heightField">Height (CM)</label>
+															<input type="text" class="form-control" id="heightField" name="height" placeholder="Height (CM)" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="volumeField">Volume (CBM)</label>
+															<input type="text" class="form-control" id="volumeField" name="volume" placeholder="Volume (CBM)" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="weightField">Weight (Kg)</label>
+															<input type="text" class="form-control" id="weightField" name="weight" placeholder="Weight (Kg)" required>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="commodityField">Commodity Type</label>
+															<select class="form-control" id="commodityField" name="commodity">
+																<option value="" class="placeholder" hidden>Pilih Commodity Type</option>
+																<option value="">AC</option>
+																<option value="">Air Mineral</option>
+																<option value="">Akar-Akaran</option>
+																<option value="">Alat Berat</option>
+																<option value="">Alat Kesehatan</option>
+																<option value="">Alat Listrik</option>
+																<option value="">Alat Rumah Tangga</option>
+																<option value="">Alumunium</option>
+																<option value="">Bahan Bangunan</option>
+															</select>
+														</div>
+														<div class="form-group col-md-6">
+															<label class="label-form font-text-semibold" for="commodityDescriptionField">Commodity Description</label>
+															<input type="text" class="form-control" id="commodityDescriptionField" name="commodityDescription" placeholder="Commodity Description" required>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="button-area">
+										<ul>
+											<li data-aos="zoom-in">
+												<a href="check-rates-result.html" class="button white full-rounded font-text-semibold">Kembali</a>
+											</li>
+											<li data-aos="zoom-in">
+												<button class="button full-rounded font-text-semibold" type="submit">Dapatkan Penawaran</button>
+											</li>
+										</ul>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+{% endblock %}

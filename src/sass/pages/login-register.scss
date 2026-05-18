@@ -1,0 +1,262 @@
+.login-register-page {
+	// background-color: $light-blue;
+
+	.header-fix {
+		position: sticky;
+		// background-color: rgba($black, 0.3);
+		// background-color: $navy;
+		// backdrop-filter: saturate(180%) blur(20px);
+		// box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
+		background: #0F698D;
+		background: -webkit-linear-gradient(130deg, rgba(15, 105, 141, 1) 0%, rgba(1, 51, 76, 1) 100%);
+		background: -moz-linear-gradient(130deg, rgba(15, 105, 141, 1) 0%, rgba(1, 51, 76, 1) 100%);
+		background: linear-gradient(130deg, rgba(15, 105, 141, 1) 0%, rgba(1, 51, 76, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0F698D", endColorstr="#01334C", GradientType=0);
+	}
+}
+
+.login {
+	padding: 50px 16px;
+	// margin: 80px 0;
+
+	@include breakpoint(tablet) {
+		padding: 100px 0;
+		max-width: 600px;
+		margin: 0 auto;
+		min-height: 400px;
+		// height: 100vh;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	@include breakpoint(desktop) {
+		min-height: 600px;
+	}
+
+	.wrapper {
+		width: 100%;
+		background-color: $white;
+		padding: 32px 16px;
+		border-radius: 40px;
+
+		@include breakpoint(tablet) {
+			padding: 40px;
+		}
+	}
+
+	.logo-area {
+		figure {
+			max-width: 45%;
+			margin: 0 auto;
+		}
+
+		+ .custom-form {
+			margin-top: 32px;
+		}
+	}
+
+	.custom-form {
+		+ .nav-bottom {
+			margin-top: 24px;
+		}
+	}
+
+	.forgot-password {
+		text-align: right;
+
+		a {
+			font-size: 12px;
+			text-decoration: underline;
+			
+			@include breakpoint(tablet) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.nav-bottom {
+		text-align: center;
+		color: $semi-grey;
+
+		a {
+			text-decoration: underline;
+		}
+
+		.info-login {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+
+			&:before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: 50%;
+				bottom: initial;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 1px;
+				background-color: $border-light;
+			}
+
+			h6 {
+				font-size: 0.9em;
+				padding: 2px 16px 0;
+				background-color: $white;
+			
+				@include breakpoint(tablet) {
+					font-size: 1em;
+				}
+			}
+
+			+ .button-area {
+				margin-top: 24px;
+			}
+		}
+
+		.button-area {
+			a {
+				display: block;
+				color: $navy;
+				text-decoration: none;
+				padding: 12px 20px;
+				border: 1px solid $border-light;
+				border-radius: 30px;
+
+				&:hover {
+					color: $white;
+					background-color: $navy;
+					border-color: $navy;
+
+					.icon {
+						&.apple {
+							background-image: url('../assets/img/icon-apple-white.png');
+						}
+
+						&.google {
+							background-image: url('../assets/img/icon-google-white.png');
+						}
+					}
+				}
+
+				+ a {
+					margin-top: 8px;
+				}
+			}
+
+			.wrapper-button {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+			}
+
+			.icon {
+				display: block;
+				width: 20px;
+				height: 20px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				transition: $transition-base;
+				
+				@include breakpoint(tablet) {
+					width: 28px;
+					height: 28px;
+				}
+
+				&.apple {
+					background-image: url('../assets/img/icon-apple.png');
+				}
+
+				&.google {
+					background-image: url('../assets/img/icon-google.png');
+				}
+			}
+
+			.text {
+				font-size: 1em;
+
+				@include breakpoint(tablet) {
+					font-size: 1.1em;
+				}
+			}
+
+			+ .account {
+				margin-top: 24px;
+			}
+		}
+
+		.account {
+			font-size: 0.9em;
+			
+			@include breakpoint(tablet) {
+				font-size: 1em;
+			}
+
+			+ .tnc {
+				margin-top: 24px;
+			}
+		}
+		
+		.tnc {
+			font-size: 0.75em;
+
+			@include breakpoint(tablet) {
+				font-size: 0.85em;
+			}
+
+			a {
+				color: $semi-grey;
+
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	}
+
+	.email-sent {
+		text-align: center;
+		padding: 48px 0;
+
+		h5 {
+			font-size: 1.5em;
+			line-height: 130%;
+			color: #7ca1d2;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.6em;
+			}
+
+			+ h6 {
+				margin-top: 8px;
+			}
+		}
+
+		h6 {
+			font-size: 0.9em;
+			line-height: 130%;
+			color: $semi-grey;
+			
+			@include breakpoint(tablet) {
+				font-size: 1em;
+			}
+
+			+ .button-area {
+				margin-top: 20px;
+			}
+		}
+
+		.button-area {
+			.button {
+				margin: 0 auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,173 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'contact' %}
+{% set head_title = 'Contact Page' %}
+{% block page %}
+
+			<div class="page-content">
+				<div class="contact-page">
+					<section class="header-page">
+						<div class="header-wrapper">
+							<div class="container">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item" data-aos="fade-in">
+											<a href="index.html">
+												<span class="fa fa-home"></span>
+											</a>
+										</li>
+										<li class="breadcrumb-item active" data-aos="fade-in" aria-current="page">Contact</li>
+									</ol>
+								</nav>
+								<div class="title-page">
+									<h2 class="font-text-semibold" data-aos="fade-in">Contact</h2>
+									<h6 data-aos="fade-in">Description Here</h6>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="content-page overflow-init">
+						<div class="container">
+							<div class="contact-content">
+								<div class="map-area">
+									<div class="wrapper-map" data-aos="fade-in">
+										<div class="background-map">
+											<figure>
+												<img src="assets/img/map-westjava.png" alt="">
+											</figure>
+										</div>
+										<div class="map-point">
+											<div class="point one" data-aos="zoom-in" data-aos-delay="600">
+												<span class="dots"></span>
+												<div class="point-tooltip bottom">
+													<div class="branch-box">
+														<div class="branch-title">
+															<h4 class="font-text-semibold">Office</h4>
+															<h6 class="font-text-semibold">Jakarta Selatan</h6>
+														</div>
+														<div class="branch-address">
+															<p class="font-text-semibold">Ruko Kindo Square C.18, Jl Duren Tiga Raya 101 RT.8/1 Duren Tiga, Pancoran, Jakarta Selatan, 12760.</p>
+														</div>
+														<div class="direction-address">
+															<h6>
+																<a href="#" target="_blank">
+																	<span class="text font-text-semibold">Get Direction</span>
+																	<span class="icon fa fa-arrow-right"></span>
+																</a>
+															</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="point two" data-aos="zoom-in" data-aos-delay="600">
+												<span class="dots"></span>
+												<div class="point-tooltip top">
+													<div class="branch-box">
+														<div class="branch-title">
+															<h4 class="font-text-semibold">Office</h4>
+															<h6 class="font-text-semibold">Bekasi</h6>
+														</div>
+														<div class="branch-address">
+															<p class="font-text-semibold">Jl. Kapuas Raya No.1 RT 04, RT.007/RW.019, Harapan Jaya, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17124.</p>
+														</div>
+														<div class="direction-address">
+															<h6>
+																<a href="#" target="_blank">
+																	<span class="text font-text-semibold">Get Direction</span>
+																	<span class="icon fa fa-arrow-right"></span>
+																</a>
+															</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="location-area">
+									<div class="branch-location row justify-content-center">
+										{# <div class="col-md-12">
+											<div class="branch-highlight" data-aos="zoom-in">
+												<div class="highlight-flex">
+													<div class="logo-area">
+														<figure>
+															<img src="assets/img/logo-white.png" alt="">
+														</figure>
+														<h5 class="font-text-semibold">PT. Tan Esa Gemilang</h5>
+													</div>
+													<div class="phone-mail-area">
+														<div class="phone-area">
+															<h4 class="font-text-semibold">Phone</h4>
+															<a href="tel:+628111040429" target="_blank" class="font-text-semibold">+62-8111-0404-29</a>
+														</div>
+														<div class="mail-area">
+															<h4 class="font-text-semibold">Mail</h4>
+															<a href="mailto:hello@tanesalogistics.com" class="font-text-semibold" target="_blank">hello@tanesalogistics.com</a>
+														</div>
+													</div>
+													<div class="address-area">
+														<div class="branch-title">
+															<h4 class="font-text-semibold">Office</h4>
+															<h6 class="font-text-semibold">Jakarta Selatan</h6>
+														</div>
+														<div class="branch-address">
+															<p class="font-text-semibold">Ruko Kindo Square C.18, Jl Duren Tiga Raya 101 RT.8/1 Duren Tiga, Pancoran, Jakarta Selatan, 12760.</p>
+														</div>
+														<div class="direction-address">
+															<h6>
+																<a href="#" target="_blank">
+																	<span class="text font-text-semibold">Get Direction</span>
+																	<span class="icon fa fa-arrow-right"></span>
+																</a>
+															</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div> #}
+										<div class="col-md-6 col-lg-4">
+											<div class="branch-box" data-aos="zoom-in">
+												<div class="branch-title">
+													<h4 class="font-text-semibold">Office</h4>
+													<h6 class="font-text-semibold">Jakarta Selatan</h6>
+												</div>
+												<div class="branch-address">
+													<p class="font-text-semibold">Ruko Kindo Square C.18, Jl Duren Tiga Raya 101 RT.8/1 Duren Tiga, Pancoran, Jakarta Selatan, 12760.</p>
+												</div>
+												<div class="direction-address">
+													<h6>
+														<a href="#" target="_blank">
+															<span class="text font-text-semibold">Get Direction</span>
+															<span class="icon fa fa-arrow-right"></span>
+														</a>
+													</h6>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-lg-4">
+											<div class="branch-box" data-aos="zoom-in">
+												<div class="branch-title">
+													<h4 class="font-text-semibold">Office</h4>
+													<h6 class="font-text-semibold">Bekasi</h6>
+												</div>
+												<div class="branch-address">
+													<p class="font-text-semibold">Jl. Kapuas Raya No.1 RT 04, RT.007/RW.019, Harapan Jaya, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17124.</p>
+												</div>
+												<div class="direction-address">
+													<h6>
+														<a href="#" target="_blank">
+															<span class="text font-text-semibold">Get Direction</span>
+															<span class="icon fa fa-arrow-right"></span>
+														</a>
+													</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+{% endblock %}

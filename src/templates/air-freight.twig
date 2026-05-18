@@ -1,0 +1,268 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'air-freight' %}
+{% set head_title = 'Air Freight' %}
+{% block page %}
+
+			<div class="page-content">
+				<div class="air-freight-page">
+					<section class="header-page">
+						<div class="header-wrapper">
+							<div class="container">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item" data-aos="fade-in">
+											<a href="index.html">
+												<span class="fa fa-home"></span>
+											</a>
+										</li>
+										<li class="breadcrumb-item active" data-aos="fade-in" aria-current="page">Air Freight</li>
+									</ol>
+								</nav>
+								<div class="title-cover">
+									<div class="row align-items-center">
+										<div class="col-md-6 order-md-last hide-mobile">
+											<div class="cover-image" data-aos="zoom-in">
+												<figure>
+													<img src="assets/img/photos/img-airfreight.png" alt="">
+												</figure>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="title-page">
+												<h2 class="font-text-semibold" data-aos="fade-in">
+													Air Freight
+												</h2>
+												<h6 data-aos="fade-in">Kami memberikan berbagai macam solusi sesuai dengan kebutuhan bisnis Anda.</h6>
+											</div>
+											<div class="price-check">
+												<div class="check-box" data-aos="zoom-in">
+													<h5 class="font-text-semibold">Cek Tarif</h5>
+													<div class="custom-form">
+														<form class="form">
+															<div class="form-row">
+																<div class="form-group col-md-12">
+																	<label class="label-form font-text-semibold" for="originCityField">Kota Asal</label>
+																	<input type="text" class="form-control" id="originCityField" name="originCity" placeholder="Masukkan Kota Asal..." required>
+																</div>
+																<div class="form-group col-md-12">
+																	<label class="label-form font-text-semibold" for="destinationCityField">Kota Tujuan</label>
+																	<input type="text" class="form-control" id="destinationCityField" name="destinationCity" placeholder="Masukkan Kota Tujuan..." required>
+																</div>
+															</div>
+															<div class="button-area">
+																<a href="check-rates-result-empty.html" class="button full-rounded full-width font-text-semibold">Cari</a>
+																<!-- <button class="button full-rounded full-width font-text-semibold" type="submit">Cari</button> -->
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					{# <section class="transportation-service overflow-init">
+						<div class="container">
+							<div class="title-section">
+								<h2 class="font-text-semibold" data-aos="zoom-in">
+									Pilih Tipe Muatan Sesuai<br>
+									Kebutuhan Kiriman Anda
+								</h2>
+							</div>
+							<div class="thumbnail-overlaps">
+								<div class="row justify-content-center">
+									<div class="col-md-6">
+										<div class="box" data-aos="fade-in">
+											<div class="thumbnail-wrapper text-center">
+												<div class="image-area">
+													<figure data-aos="zoom-in">
+														<img src="assets/img/photos/img-fcl.png" alt="">
+													</figure>
+												</div>
+												<div class="desc-area">
+													<h5 class="font-text-semibold" data-aos="fade-in">Full Container Load (FCL)</h5>
+													<p data-aos="fade-in">Satu container penuh (20ft / 40ft) khusus untuk barang Anda. Cocok untuk volume besar dan eksekusi proyek.</p>
+												</div>
+												<div class="button-area" data-aos="fade-in">
+													<a href="fcl.html" class="button full-rounded full-width font-text-semibold">Pelajari Selengkapnya</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="box" data-aos="fade-in">
+											<div class="thumbnail-wrapper text-center">
+												<div class="image-area">
+													<figure data-aos="zoom-in">
+														<img src="assets/img/photos/img-lcl.png" alt="">
+													</figure>
+												</div>
+												<div class="desc-area">
+													<h5 class="font-text-semibold" data-aos="fade-in">Less Than Container Load (LCL)</h5>
+													<p data-aos="fade-in">Kirim kargo minimum 1 kubik tanpa harus sewa satu container penuh. Lebih fleksibel untuk volume menengah.</p>
+												</div>
+												<div class="button-area" data-aos="fade-in">
+													<a href="lcl.html" class="button full-rounded full-width font-text-semibold">Pelajari Selengkapnya</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section> #}
+					<section class="related-info" data-aos="fade-in">
+						<div class="container">
+							<div class="title-section">
+								<h2 class="font-text-semibold" data-aos="zoom-in">
+									Apa yang Bisa Dikirim Lewat Laut?
+								</h2>
+							</div>
+							<div class="checklist-info">
+								<div class="row justify-content-center">
+									<div class="col-lg-10 col-xl-8">
+										<div class="checklist-card">
+											<div class="checklist-row">
+												<div class="checklist-item" data-aos="zoom-in">
+													<div class="box">
+														<div class="wrapper">
+															<span class="icon fa fa-check"></span>
+															<h5 class="font-text-medium">General Cargo</h5>
+														</div>
+													</div>
+												</div>
+												<div class="checklist-item" data-aos="zoom-in">
+													<div class="box">
+														<div class="wrapper">
+															<span class="icon fa fa-check"></span>
+															<h5 class="font-text-medium">Cargo Proyek</h5>
+														</div>
+													</div>
+												</div>
+												<div class="checklist-item" data-aos="zoom-in">
+													<div class="box">
+														<div class="wrapper">
+															<span class="icon fa fa-check"></span>
+															<h5 class="font-text-medium">Mesin & Peralatan Industri</h5>
+														</div>
+													</div>
+												</div>
+												<div class="checklist-item" data-aos="zoom-in">
+													<div class="box">
+														<div class="wrapper">
+															<span class="icon fa fa-check"></span>
+															<h5 class="font-text-medium">Kendaraan</h5>
+														</div>
+													</div>
+												</div>
+												<div class="checklist-item" data-aos="zoom-in">
+													<div class="box">
+														<div class="wrapper">
+															<span class="icon fa fa-check"></span>
+															<h5 class="font-text-medium">FMCG</h5>
+														</div>
+													</div>
+												</div>
+												<div class="checklist-item" data-aos="zoom-in">
+													<div class="box">
+														<div class="wrapper">
+															<span class="icon fa fa-check"></span>
+															<h5 class="font-text-medium">Cargo Khusus</h5>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="faq-section overflow-init">
+						<div class="container">
+							<div class="title-section">
+								<h2 class="font-text-semibold" data-aos="zoom-in">FAQ</h2>
+							</div>
+							<div class="faq">
+								<div class="row justify-content-center">
+									<div class="col-lg-10 col-xl-8">
+										<div class="faq-content">
+											<div class="accordion custom-accordion" id="accordionExample">
+												<div class="accordion-list" data-aos="fade-up">
+													<div class="accordion-head" id="headingOne">
+														<div class="toggle-collapse" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+															<h5 class="font-text-semibold">
+																Layanan apa saja yang disediakan oleh Tanesa Logistics?
+															</h5>
+															<span class="icon-arrow fa fa-angle-up"></span>
+														</div>
+													</div>
+													<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+														<div class="accordion-body">
+															<p>
+																Tanesa Logistics menyediakan layanan pengiriman darat, laut, dan udara, serta penyimpanan gudang, distribusi, dan solusi logistik terintegrasi. Kami siap menyesuaikan layanan sesuai kebutuhan bisnis Anda.
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="accordion-list" data-aos="fade-up">
+													<div class="accordion-head" id="headingTwo">
+														<div class="toggle-collapse collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+															<h5 class="font-text-semibold">
+																Apakah Tanesa melayani pengiriman ke luar negeri?
+															</h5>
+															<span class="icon-arrow fa fa-angle-up"></span>
+														</div>
+													</div>
+													<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+														<div class="accordion-body">
+															<p>
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis nibh diam, nec ornare lectus ultrices porttitor. Duis tempus libero sed tortor elementum hendrerit. Nulla facilisi. Nulla in elementum massa. Suspendisse viverra libero vehicula enim molestie, in porttitor nibh porta. Phasellus iaculis vehicula elit, id luctus elit rutrum quis. Vestibulum elementum urna sit amet lobortis efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="accordion-list" data-aos="fade-up">
+													<div class="accordion-head" id="headingThree">
+														<div class="toggle-collapse collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+															<h5 class="font-text-semibold">
+																Bagaimana cara mendapatkan penawaran harga pengiriman?
+															</h5>
+															<span class="icon-arrow fa fa-angle-up"></span>
+														</div>
+													</div>
+													<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+														<div class="accordion-body">
+															<p>
+																<strong>Ada 2 cara yang dapat dilakukan.</strong>
+															</p>
+															<ol>
+																<li>
+																	Fusce convallis pellentesque fringilla. Nunc consequat nulla ipsum, vel tempor elit laoreet ut. Fusce sit amet eros quis tellus suscipit commodo. Morbi nunc lectus, luctus sed ante dignissim, hendrerit iaculis est.
+																</li>
+																<li>
+																	Vestibulum gravida ultrices augue, ac interdum elit porta non. Duis et maximus metus, ut imperdiet ex. Sed non eros a augue imperdiet suscipit ut nec augue.
+																</li>
+																<li>
+																	Nunc at varius eros. Duis tincidunt in purus vitae laoreet. Donec vel maximus eros, vitae rhoncus arcu
+																</li>
+																<li>
+																	Aliquam erat volutpat. Suspendisse ornare sed diam eget volutpat. Phasellus imperdiet dapibus pulvinar. Aliquam et neque nulla.
+																</li>
+															</ol>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+{% endblock %}

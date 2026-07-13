@@ -184,6 +184,12 @@ body {
 	// 	}
 	// }
 
+	.header-left {
+		@include breakpoint(desktop) {
+			width: 15%;
+		}
+	}
+
 	.header-center {
 		.nav-menu {
 			gap: 10px;
@@ -195,6 +201,10 @@ body {
 	}
 
 	.header-right {
+		@include breakpoint(desktop) {
+			min-width: 15%;
+		}
+
 		.nav-menu {
 			gap: 10px;
 
@@ -220,7 +230,7 @@ body {
 		}
 
 		@include breakpoint(desktop) {
-			text-align: center;
+			text-align: left;
 		}
 
 		a {

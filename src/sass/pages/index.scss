@@ -247,6 +247,15 @@
 					}
 				}
 
+				.jcf-select-text {
+					font-size: 14px;
+					line-height: 45px;
+					
+					@include breakpoint(tablet) {
+						font-size: 16px;
+					}
+				}
+
 				.form-row {
 					width: 100%;
 					

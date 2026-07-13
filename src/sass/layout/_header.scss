@@ -167,18 +167,37 @@ body {
 		}
 	}
 
-	.header-left {
-		@include breakpoint(desktop) {
-			width: 30%;
+	// .header-left {
+	// 	@include breakpoint(desktop) {
+	// 		display: flex;
+	// 		flex-wrap: wrap;
+	// 		align-items: center;
+	// 		gap: 100px;
+	// 	}
+
+	// 	.nav-menu {
+	// 		gap: 8px;
+			
+	// 		@include breakpoint(tablet) {
+	// 			gap: 16px;
+	// 		}
+	// 	}
+	// }
+
+	.header-center {
+		.nav-menu {
+			gap: 10px;
+
+			@include breakpoint(tablet) {
+				gap: 20px;
+			}
 		}
 	}
 
 	.header-right {
-		@include breakpoint(desktop) {
-			width: 30%;
-		}
-
 		.nav-menu {
+			gap: 10px;
+
 			@include breakpoint(desktop) {
 				justify-content: flex-end;
 			}
@@ -189,10 +208,6 @@ body {
 		display: block;
 		z-index: 2;
 		position: relative;
-
-		@include breakpoint(desktop) {
-			width: 30%;
-		}
 	}
 
 	.brand-logo {
@@ -264,11 +279,6 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			gap: 8px;
-			
-			@include breakpoint(tablet) {
-				gap: 16px;
-			}
 
 			li {
 				position: relative;

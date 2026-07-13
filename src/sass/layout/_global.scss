@@ -1340,6 +1340,12 @@ b {
 			-webkit-overflow-scrolling: touch;
 			border-radius: 30px;
 			box-shadow: 0 0 20px rgba($black, 0.15);
+			scrollbar-width: none;
+			-ms-overflow-style: none;
+
+			&::-webkit-scrollbar {
+				display: none; 
+			}
 
 			.nav-item {
 				padding: 4px;
@@ -3019,8 +3025,9 @@ b {
 
 .tooltip {
 	.tooltip-inner {
-		padding: 10px;
-		border-radius: 30px;
+		text-align: left;
+		padding: 10px 15px;
+		border-radius: 20px;
 	}
 }
 

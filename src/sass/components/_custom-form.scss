@@ -97,6 +97,10 @@
 		span {
 			border-color: $white;
 		}
+
+		& +.form-check-label {
+			vertical-align: middle;
+		}
 	}
 
 	.invalid-feedback {

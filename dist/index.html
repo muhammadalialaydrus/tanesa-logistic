@@ -58,8 +58,18 @@
 		<header class="header-fix">
 			<div class="container">
 				<nav class="header-menu">
-					<div class="header-left hide-tablet">
-						<ul class="nav-menu flat" data-aos="fade-right">
+					<div class="header-left">
+						<div class="header-logo">
+							<h1 class="brand-logo" data-aos="zoom-in">
+								<a href="index.html">
+									<span class="logo"></span>
+									<strong>Tanesa Logistics</strong>
+								</a>
+							</h1>
+						</div>
+					</div>
+					<div class="header-center hide-tablet">
+						<ul class="nav-menu flat" data-aos="zoom-in">
 							<li>
 								<a href="index.html" class="font-text-semibold active" >
 									<span>Beranda</span>
@@ -80,38 +90,32 @@
 									<span>Cek Tarif</span>
 								</a>
 							</li>
-						</ul>
-					</div>
-					<div class="header-logo">
-						<h1 class="brand-logo" data-aos="zoom-in">
-							<a href="index.html">
-								<span class="logo"></span>
-								<strong>Tanesa Logistics</strong>
-							</a>
-						</h1>
-					</div>
-					<div class="header-right">
-						<ul class="nav-menu flat" data-aos="fade-left">
-							<li class="hide-tablet">
+
+							<li>
 								<a href="client.html" class="font-text-semibold">
 									<span>Klien</span>
 								</a>
 							</li>
-							<li class="hide-tablet">
+							<li>
 								<a href="portfolio.html" class="font-text-semibold">
 									<span>Portfolio</span>
 								</a>
 							</li>
-							<li class="hide-tablet">
+							<li>
 								<a href="blog.html" class="font-text-semibold">
 									<span>Blog</span>
 								</a>
 							</li>
-							<li class="hide-tablet">
+							<li>
 								<a href="contact.html" class="font-text-semibold">
 									<span>Contact</span>
 								</a>
 							</li>
+						</ul>
+					</div>
+					
+					<div class="header-right">
+						<ul class="nav-menu flat" data-aos="fade-left">
 							<li class="hide-tablet">
 								<div class="search-web">
 									<div class="search-input">
@@ -151,9 +155,9 @@
 					                    <div class="user-menu">
 					                        <div class="user-image">
 					                        	<figure>
-					                            	<img src="assets/img/photos/avatar-karen_gillan2.jpg" alt="user">
-													
-					                        	</figure>
+					                            	<img src="assets/img/photos/avatar-karen_gillan2.jpg" alt="user"> -->
+													<!-- <span class="text-logo font-text-semibold">J</span> -->
+					                        	<!-- </figure>
 					                        </div>
 					                    </div>
 					                    <div class="user-info">
@@ -300,10 +304,30 @@
 								<form class="form">
 									<div class="form-row">
 										<div class="form-group col-md-6">
-											<input type="text" class="form-control" id="originCityField" name="originCity" placeholder="Kota Asal..." required>
+											<!-- <input type="text" class="form-control" id="originCityField" name="originCity" placeholder="Kota Asal..." required> -->
+											<select class="form-control" id="originCityField" name="originCity">
+												<option value="" class="placeholder" hidden>Pilih Kota Asal</option>
+												<option value="">Banten</option>
+												<option value="">Bekasi</option>
+												<option value="">Jakarta</option>
+												<option value="">Semarang</option>
+												<option value="">Surabaya</option>
+												<option value="">Bali</option>
+												<option value="">Makassar</option>
+											</select>
 										</div>
 										<div class="form-group col-md-6">
-											<input type="text" class="form-control" id="destinationCityField" name="destinationCity" placeholder="Kota Tujuan..." required>
+											<!-- <input type="text" class="form-control" id="destinationCityField" name="destinationCity" placeholder="Kota Tujuan..." required> -->
+											<select class="form-control" id="destinationCityField" name="destinationCity">
+												<option value="" class="placeholder" hidden>Pilih Kota Tujuan</option>
+												<option value="">Banten</option>
+												<option value="">Bekasi</option>
+												<option value="">Jakarta</option>
+												<option value="">Semarang</option>
+												<option value="">Surabaya</option>
+												<option value="">Bali</option>
+												<option value="">Makassar</option>
+											</select>
 										</div>
 									</div>
 									<div class="button-area">
@@ -627,7 +651,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb1.jpg" alt="">
@@ -649,12 +673,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman 200 unit Pompa Air Guntur</a>
+															<a href="#">Pengiriman 200 unit Pompa Air Guntur</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -668,7 +692,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb2.jpg" alt="">
@@ -687,12 +711,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
+															<a href="#">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -706,7 +730,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb3.jpg" alt="">
@@ -725,12 +749,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Traktor Roda 4</a>
+															<a href="#">Pengiriman Traktor Roda 4</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -744,7 +768,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb4.jpg" alt="">
@@ -763,12 +787,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
+															<a href="#">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -782,7 +806,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb5.jpg" alt="">
@@ -804,12 +828,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman 200 unit Pompa Air Guntur</a>
+															<a href="#">Pengiriman 200 unit Pompa Air Guntur</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -823,7 +847,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb6.jpg" alt="">
@@ -842,12 +866,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Traktor Roda 4</a>
+															<a href="#">Pengiriman Traktor Roda 4</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -1076,7 +1100,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb1.jpg" alt="">
@@ -1104,12 +1128,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman 200 unit Pompa Air Guntur</a>
+															<a href="#">Pengiriman 200 unit Pompa Air Guntur</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -1123,7 +1147,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb2.jpg" alt="">
@@ -1148,12 +1172,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
+															<a href="#">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -1167,7 +1191,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb3.jpg" alt="">
@@ -1192,12 +1216,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Traktor Roda 4</a>
+															<a href="#">Pengiriman Traktor Roda 4</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -1211,7 +1235,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb4.jpg" alt="">
@@ -1236,12 +1260,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
+															<a href="#">Pengiriman Paket Pekerjaan Pengadaan Bantuan Alat dan Mesin Pertanian Prapanen berupa Drone Pertanian (32 unit)</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -1255,7 +1279,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb5.jpg" alt="">
@@ -1283,12 +1307,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman 200 unit Pompa Air Guntur</a>
+															<a href="#">Pengiriman 200 unit Pompa Air Guntur</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>
@@ -1302,7 +1326,7 @@
 										<div class="thumbnail-photo" data-aos="zoom-in">
 											<div class="thumbnail-inside">
 												<div class="image-area">
-													<a href="detail.html">
+													<a href="#">
 														<div class="images br-60">
 															<figure>
 																<img class="transform-scale" src="assets/img/photos/thumb6.jpg" alt="">
@@ -1327,12 +1351,12 @@
 															</li>
 														</ul>
 														<h3 class="title-thumbs text-ellipsis overflow-hidden line-clamp-2 font-text-semibold">
-															<a href="detail.html">Pengiriman Traktor Roda 4</a>
+															<a href="#">Pengiriman Traktor Roda 4</a>
 														</h3>
 													</div>
 													<div class="viewall">
 														<h6 class="font-text-semibold">
-															<a href="detail.html">
+															<a href="#">
 																<span>Selengkapnya</span>
 																<span class="icon-arrow fa fa-arrow-right"></span>
 															</a>

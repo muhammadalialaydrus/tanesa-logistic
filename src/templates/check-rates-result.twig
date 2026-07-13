@@ -49,11 +49,31 @@
 												<div class="form-row">
 													<div class="form-group col-md-6 col-lg-12">
 														<label class="label-form font-text-semibold" for="originCityField">Kota Asal</label>
-														<input type="text" class="form-control" id="originCityField" name="originCity" placeholder="Masukkan Kota Asal..." required>
+														<!-- <input type="text" class="form-control" id="originCityField" name="originCity" placeholder="Masukkan Kota Asal..." required> -->
+														<select class="form-control" id="originCityField" name="originCity" required>
+															<option value="" class="placeholder" hidden>Pilih Kota Asal</option>
+															<option value="">Banten</option>
+															<option value="">Bekasi</option>
+															<option value="">Jakarta</option>
+															<option value="">Semarang</option>
+															<option value="">Surabaya</option>
+															<option value="">Bali</option>
+															<option value="">Makassar</option>
+														</select>
 													</div>
 													<div class="form-group col-md-6 col-lg-12">
 														<label class="label-form font-text-semibold" for="destinationCityField">Kota Tujuan</label>
-														<input type="text" class="form-control" id="destinationCityField" name="destinationCity" placeholder="Masukkan Kota Tujuan..." required>
+														<!-- <input type="text" class="form-control" id="destinationCityField" name="destinationCity" placeholder="Masukkan Kota Tujuan..." required> -->
+														<select class="form-control" id="destinationCityField" name="destinationCity" required>
+															<option value="" class="placeholder" hidden>Pilih Kota Tujuan</option>
+															<option value="">Banten</option>
+															<option value="">Bekasi</option>
+															<option value="">Jakarta</option>
+															<option value="">Semarang</option>
+															<option value="">Surabaya</option>
+															<option value="">Bali</option>
+															<option value="">Makassar</option>
+														</select>
 													</div>
 													<div class="form-group col-md-6 col-lg-12">
 														<label class="label-form font-text-semibold" for="transportTypeField">Tipe Transport</label>
@@ -96,7 +116,21 @@
 										<div class="tab-filter-area">
 											<div class="tab-filter-wrapper">
 												<div class="tab-area">
-													<ul data-aos="zoom-in">
+													<ul class="nav nav-pills" id="our-service-tab" role="tablist" data-aos="zoom-in">
+														<li class="nav-item" role="presentation">
+															<a href="#" class="font-text-semibold tab-item active">All Freight</a>
+														</li>
+														<li class="nav-item" role="presentation">
+															<a href="#" class="font-text-semibold tab-item">Sea & Air Freight</a>
+														</li>
+														<li class="nav-item" role="presentation">
+															<a href="#" class="font-text-semibold tab-item">Land Freight</a>
+														</li>
+													</ul>
+
+
+
+													{# <ul data-aos="zoom-in">
 														<li>
 															<a href="#" class="font-text-semibold tab-item active">All Freight</a>
 														</li>
@@ -106,7 +140,7 @@
 														<li>
 															<a href="#" class="font-text-semibold tab-item">Land Freight</a>
 														</li>
-													</ul>
+													</ul> #}
 												</div>
 												<div class="filter-area">
 													<div class="filter-group">

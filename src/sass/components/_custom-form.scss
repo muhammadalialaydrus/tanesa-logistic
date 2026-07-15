@@ -121,6 +121,90 @@
 		}
 	}
 
+	.select-icon-wrapper {
+		position: relative;
+
+		.icon-select {
+			position: absolute;
+			top: 50%;
+			bottom: initial;
+			left: 15px;
+			right: initial;
+			transform: translate(0, -50%);
+		}
+
+		.select2 {
+			.select2-selection {
+				.select2-selection__rendered {
+					padding-left: 35px;
+				}
+			}
+		}
+	}
+
+	.select2 {
+		width: 100% !important;
+
+		.select2-selection {
+			border: 0;
+			color: $title-color;
+			border: 0;
+			background-color: $light-blue;
+			outline: 0;
+			height: auto;
+			border-radius: 20px !important;
+
+			.select2-selection__rendered {
+				font-size: 12px;
+				line-height: 150%;
+				color: $title-color;
+				padding: 11px 36px 11px 12px;
+
+				@include breakpoint(tablet) {
+					font-size: 14px;
+					padding: 11px 36px 11px 16px;
+				}
+
+				.select2-selection__placeholder {
+					color: $text-light;
+				}
+			}
+
+			.select2-selection__clear {
+				position: absolute;
+				top: 0;
+				left: initial;
+				right: 20px;
+				margin: 0;
+				width: 20px;
+				height: 100%;
+				padding: 0;
+				color: $text-semi-dark;
+			}
+
+			.select2-selection__arrow {
+				// color: $text-semi-dark;
+				height: 100%;
+				top: 0;
+				right: 5px;
+
+				b {
+					border-color: $text-semi-dark transparent transparent transparent;
+				}
+			}
+		}
+
+		&.select2-container--open {
+			.select2-selection {
+				.select2-selection__arrow {
+					b {
+						border-color: transparent transparent $text-semi-dark transparent;
+					}
+				}
+			}
+		}
+	}
+
 	fieldset {
 		    padding: 10px 20px 30px;
 			border-radius: 8px;
@@ -278,3 +362,59 @@
 		}
 	}
 }
+
+.select2-container {
+	.select2-dropdown {
+		color: $title-color;
+		border: 0;
+		background-color: $light-blue;
+		border-radius: 30px;
+		box-shadow: 0 0 10px rgba($black, 0.15);
+		overflow: hidden;
+
+		&.select2-dropdown--below {
+			margin-top: 10px;
+		}
+
+		&.select2-dropdown--above {
+			margin-top: -10px;
+		}
+	}
+
+	.select2-search {
+		padding: 15px;
+
+		.select2-search__field {
+			color: $title-color;
+			padding: 6px 10px;
+			border: 0;
+			background-color: $white;
+			border-radius: 20px;
+		}
+	}
+
+	.select2-results {
+		.select2-results__options {
+			border-top: 1px solid #bbcad9;
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			.select2-results__option {
+				padding: 6px 20px;
+				color: $body-color;
+
+				&.select2-results__option--highlighted {
+					background-color: $semi-blue;
+					color: $navy;
+				}
+
+				&.select2-results__option--selected {
+					background-color: $navy;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+

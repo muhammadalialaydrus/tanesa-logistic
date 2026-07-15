@@ -16,10 +16,20 @@ $(function() {
 	// Document Ready
 
 	jcf.setOptions('Select', {
-		wrapNative: true
+		wrapNative: true,
+		selector: '.custom-jcf'
 	});
 
 	jcf.replaceAll();
+
+	// jcf.replace();
+    
+    // 2. Initialize Select2 on your excluded element
+    $('.custom-select2').select2({
+		placeholder: "Select an option",
+		allowClear: true
+    });
+
 
 	$('[data-toggle="tooltip"]').tooltip(); 
 

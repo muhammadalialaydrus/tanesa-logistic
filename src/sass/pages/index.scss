@@ -255,6 +255,22 @@
 						font-size: 16px;
 					}
 				}
+				
+				.select2 {
+					.select2-selection {
+						.select2-selection__rendered {
+							font-size: 14px;
+							padding-top: 12px;
+							padding-bottom: 12px;
+
+							@include breakpoint(tablet) {
+								font-size: 16px;
+								padding-top: 11px;
+								padding-bottom: 11px;
+							}
+						}
+					}
+				}
 
 				.form-row {
 					width: 100%;

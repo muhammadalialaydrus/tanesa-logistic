@@ -4380,7 +4380,15 @@ b {
 
 	.needmore {
 		h5 {
-			font-size: 1.1rem;
+			font-size: 1rem;
+			
+			@include breakpoint(small-mobile) {
+				font-size: 0.9rem;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 1.1rem;
+			}
 		}
 
 		a {
